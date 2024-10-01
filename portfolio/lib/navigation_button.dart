@@ -1,13 +1,14 @@
 import 'package:flutter/material.dart';
 
 class NavigationButton extends StatelessWidget {
-  const NavigationButton({super.key});
+  final String label;
+  const NavigationButton(this.label, {super.key});
 
   @override
   Widget build(BuildContext context) {
     return TextButton(
       onPressed: () {},
-      child: const Text("Button"),
+      child: Text(label),
     );
   }
 }

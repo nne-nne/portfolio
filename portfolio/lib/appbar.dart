@@ -10,10 +10,10 @@ class Appbar extends StatelessWidget {
       decoration: const BoxDecoration(color: Colors.blueGrey),
       child: const Row(
         children: [
-          NavigationButton(),
-          NavigationButton(),
-          NavigationButton(),
-          NavigationButton(),
+          NavigationButton("Projects"),
+          NavigationButton("Blog"),
+          NavigationButton("Bio"),
+          NavigationButton("Contact"),
         ],
       ),
     );
