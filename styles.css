@@ -1,0 +1,147 @@
+.top-bar {
+    position: fixed;
+    font-family: 'Quicksand';
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 50px;
+    background-color: #0f0f0f;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+    box-shadow: 0 1px 3px rgb(255, 255, 255);
+}
+
+#fullpage {
+    font-family: 'Quicksand';
+    margin-top: 50px; 
+    color: white;
+}
+
+.section {
+    display: flex;
+    flex-direction: column; /* Arrange children vertically */
+    justify-content: flex-end; /* Align content at the bottom */
+    height: 100vh; /* Full viewport height */
+    font-size: 24px;
+    color: rgb(255, 255, 255);
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8); 
+    background-size: cover; 
+    background-position: center; 
+    background-repeat: no-repeat;
+    position: relative; /* Needed for absolute positioning of the content container */
+}
+
+.section-1 {
+    /*background-image: url('images/RootsOfYggdrasil.png');*/
+    background: 
+        linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), /* Overlay color */
+        url('images/RootsOfYggdrasil.png') no-repeat center center/cover;
+}
+
+.section-2 {
+    /*background-image: url('images/Meowtch.gif');*/
+    background: 
+        linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), /* Overlay color */
+        url('images/Meowtch.gif') no-repeat center center/cover;
+}
+
+.section-3 {
+    background-image: url('images/AloneNotAlone.gif');
+}
+
+.section-4 {
+    background-image: url('images/grass.webp');
+}
+
+.fp-nav ul li a span {
+    background: #0073e6;
+}
+
+.fp-nav ul li a.active span {
+    background: #ffcc00;
+}
+
+/* Full-page section for contact */
+.section-contact {
+    display: flex;
+    justify-content: center; /* Horizontally center content */
+    align-items: center; /* Vertically center content */
+    background: url('path-to-background-image.jpg') no-repeat center center/cover; /* Optional background image */
+    color: white; /* Text color */
+    position: relative;
+    height: 100vh; /* Make the section fill the viewport height */
+}
+
+/* Contact container (semi-transparent box) */
+.contact-container {
+    background-color: rgba(0, 0, 0, 0.6); /* Semi-transparent background */
+    padding: 20px;
+    border-radius: 15px;
+    text-align: center;
+    max-width: 500px;
+    width: 90%; /* Responsive width */
+    margin: 0 auto;
+}
+
+
+.profile-photo {
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    margin-bottom: 15px;
+    border: 3px solid white;
+}
+
+.contact-details p {
+    margin: 10px 0;
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+.contact-details a {
+    color: #ffcc00;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.contact-details a:hover {
+    color: #ffffff;
+}
+
+/* Container for the heading and description */
+.content-container {
+    background-color: rgba(0, 0, 0, 0.8); /* Semi-transparent background */
+    padding: 30px;
+    padding-bottom: 80px;
+    width: 100%;
+    height: auto; /* Content will take up only as much space as it needs */
+    position: absolute;
+    bottom: 0; /* Stick the container to the bottom */
+    left: 0;
+    right: 0;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+h1, h2, h3 {
+    font-family: 'Signika Negative', sans-serif;
+}
+
+/* Heading style */
+.content-container h2 {
+    font-size: 2rem;
+    margin-bottom: 15px;
+}
+.content-container h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+/* Description style */
+.content-container p {
+    font-size: 1.2rem;
+    line-height: 1;
+}
