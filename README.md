@@ -1,2 +1,2 @@
 # portfolio
-Things I do
+A quick overview of my projects
