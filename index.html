@@ -1,70 +1,180 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Adam Leczkowski Portfolio</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adam Leczkowski portfolio</title>
     <link rel="stylesheet" href="styles.css">
-    <!-- FullPage.js default styles -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/3.1.2/fullpage.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;700&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Signika+Negative:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&display=swap" rel="stylesheet">    
 </head>
 <body>
-    <!-- Top bar -->
-    <div class="top-bar">
-        Adam Leczkowski | Graphic Programmer | Unity Developer
-    </div>
+    <section id="about">
+        <header> <img src="images/ProfilePhoto.jpg" alt="Adam Leczkowski" class="profile-pic">
+            <p>Hi! My name is <br/><br/><span class="name">Adam Leczkowski</span></p>
+            <p><b>I'm a game developer and a technical artist</b></p>
+            <p>My stack:</p>
+            <div class="tag-soup">
+                <span class="tag large">Krita</span>
+                <span class="tag xlarge">C#</span>
+                <span class="tag xlarge">Unity</span>
+                <span class="tag medium">Blender</span>
+                <span class="tag xlarge">HLSL</span>
+                <span class="tag xlarge">Shader Graph</span>
+                <span class="tag medium">Godot Shading Language</span>
+            </div>
+            <p><b>Let me show you some of my projects!</b></p>   
+        </header>
+    </section>
 
-    <!-- Fullpage content -->
-    <div id="fullpage">
-        <div class="section section-1">
-            <div class="content-container">
-                <h2>Graphic design</h2>
-                <h3>Not only should it support the game - graphic design should be the cornerstone!</h3>
-                <p>"Roots of Yggdrasil" - Global Game Jam 2022, 2nd place in Gdańsk</p>
-                <p>My role: graphic designer and animator</p>
-                <p>Tools: Krita, Unity3D</p>
-            </div>
-        </div>
-        <div class="section section-2">
-            <div class="content-container">
-                <h2>Unity</h2>
-                <h3>A full immersion in the creative process is what let our team unleash our inner cats...</h3>
-                <p>"Roots of Yggdrasil" - Global Game Jam 2023, 2nd place in Gdańsk (again)</p>
-                <p>My role: Unity developer</p>
-                <p>Tools: Unity3D</p>
-            </div>
-        </div>
-        <div class="section section-3">
-            <div class="content-container">
-                <h2>Grahic programming</h2>
-                <h3>The challenging path of a graphic programmer calls, the adventure has only just begun!</h3>
-                <p>"Alone" - Vertex Game Jam 2023</p>
-                <p>Vertex - a CG science club I attended and led at Gdańsk University of Technology</p>
-                <p>I made this game in 2 days, alone)</p>
-                <p>Tools: Unity3D</p>
-            </div>
-        </div>
-        <div class="section section-4">
-            <div class="contact-container">
-                <img src="images/ProfilePhoto.jpg" alt="Your Photo" class="profile-photo">
-                <div class="contact-details">
-                    <p>Email: <a href="mailto:adamleczkowski1@gmail.com">adamleczkowski1@gmail.com</a></p>
-                    <p>LinkedIn: <a href="https://www.linkedin.com/in/adam-leczkowski-b02996212/" target="_blank">www.linkedin.com/in/adam-leczkowski-b02996212</a></p>
-                    <p>GitHub: <a href="https://github.com/nne-nne" target="_blank">github.com/nne-nne</a></p>
-                </div>
-            </div>
-        </div>
-    </div>
+    <hr class="section-divider">
 
-    <!-- FullPage.js script -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/3.1.2/fullpage.min.js"></script>
-    <script>
-        new fullpage('#fullpage', {
-          loopBottom: false,
-          loopTop: false,
-          navigation: true,
-          navigationPosition: 'right',
-        });
-    </script>
+    <section id="grass">
+        <div class="project">
+            <h2>Grass</h2>
+            <h3>Shell texturing</h3>
+            <p>Swaying grass<br/>teaches us<br/>about patience<br/>and profiling</p>
+            <p>My current obsessions include<br/>(but are not limited to)<br/>grass rendering<br/></p>
+            <div class="tag-soup">
+                <span class="tag large">Unity</span>
+                <span class="tag large">HLSL</span>
+                <span class="tag large">Shader Graph</span>
+            </div>
+        </div>
+    </section>
+    <hr class="section-divider">
+
+    <section id="roots">
+        <header>
+            <h5><a href="https://hokaros.itch.io/roots-of-yggdrasil" class="game-link">Roots of Yggdrasil</a>
+            </h5>
+            <p>HackJam GGJ 2023, 2nd place</p>
+            <p>In this gamejam, I designed, painted and animated all the arts except for the root pattern.<br/>It's my favourite.<br/>Also, my friends did a great job and it's a lot of fun to play!
+            <br/>
+            I like the idea of a tree with a heart and particle-based leaves.
+            </p>
+            <img src="images/roots.gif" alt="Roots" class="peek-image">
+            <div class="tag-soup">
+                <span class="tag large">Krita</span>
+                <span class="tag large">Unity</span>
+                <span class="tag large">Shader Graph</span>
+            </div>
+        </header>
+    </section>
+
+    <hr class="section-divider">
+
+    <section id="eye">
+        <header>
+            <h5><a href="https://globalgamejam.org/games/2025/eye-fortress-soapy-assault-7" class="game-link">Eye Fortress: Soapy Assault</a>
+            </h5>
+            <p>HackJam GGJ 2025, 1st place!</p>
+            <p>I've implemented game mechanics and blowing animations.
+            <br/>I appreciate coding extra rules in the last 15 minutes of the gamejam.
+            </p>
+            <img src="images/eyes.gif" alt="Eye fortress" class="peek-image">
+            <div class="tag-soup">
+                <span class="tag large">Unity</span>
+                <span class="tag large">C#</span>
+            </div>
+        </header>
+    </section>
+    <hr class="section-divider">
+
+    <section id="alone">
+        <header>
+            <h5><a href="https://adamleczkowski.itch.io/alone" class="game-link">Alone</a>
+            </h5>
+            <p>Vertex Game Jam</p>
+            <p>A game made alone for a gamejam of Vertex - Computer Graphics Science Club at Gdańsk University of Technology
+            <br/>I used to be a president of this club and it's definitely a starting point for many gamedev talents!
+            <br/>In this game I focused on building the atmosphere of lonely search and it's contrast to a company of someone loved
+            <br/>Various visual effects are connected with the progress of gameplay.
+            </p>
+            <img src="images/AloneNotAlone.gif" alt="Alone" class="peek-image">
+            <div class="tag-soup">
+                <span class="tag large">Unity</span>
+                <span class="tag large">C#</span>
+                <span class="tag large">Shader Graph</span>
+                <span class="tag large">HLSL</span>
+            </div>
+        </header>
+    </section>
+    <hr class="section-divider">
+
+    <section id="deep-astray">
+        <header>
+            <h5><a href="https://adamleczkowski.itch.io/deep-astray" class="game-link">Deep Astray</a>
+            </h5>
+            <p>Brackeys Game Jam 2023.2</p>
+            <p>During this gamejam, together with just one friend we've created a strong foundation of a diving horror.
+            <br/>Our submarine has a decent controls that simplifies velocity-dependent water drag
+            <br/>I was responsible the controller, for the depiction of water and the lights
+            <br/>As you dive deep astray, the lights get dimmer and dimmer...
+            </p>
+            <img src="images/deep.gif" alt="Deep Astray" class="peek-image">
+            <div class="tag-soup">
+                <span class="tag large">Unity</span>
+                <span class="tag large">C#</span>
+                <span class="tag large">Shader Graph</span>
+            </div>
+        </header>
+    </section>
+
+    <hr class="section-divider">
+
+    <section id="meowtch">
+        <header>
+            <h5><a href="https://youtu.be/WZT75BSmfKE?si=Ox-hs6ZSc6BYVjmY" class="game-link">Meowtch</a>
+            </h5>
+            <p>HackJam GGJ 2024, 2nd place</p>
+            <p>During this gamejam, we created a ragdoll cat posessed by some unnatural forces.
+            <br/>We obeyed him.
+            </p>
+            <img src="images/Meowtch.gif" alt="Meowtch" class="peek-image">
+            <div class="tag-soup">
+                <span class="tag large">Unity</span>
+                <span class="tag large">C#</span>
+                <span class="tag large">Shader Graph</span>
+                <span class="tag large">HLSL</span>
+            </div>
+        </header>
+    </section>
+    <hr class="section-divider">
+
+    <section id="mariners">
+        <header>
+            <h5><a href="https://hiplinc.itch.io/substainable-mariners" class="game-link">Substainable Mariners</a>
+            </h5>
+            <p>Game Industry Conference Poznan 2021, Polish-Swiss Game Jam on Sustainability</p>
+            <p>One of my best gamejam memories. It was a pleasure to work on this project as a C# programmer,<br/>inspiring to follow the creation process of this lovely stylized graphics
+            <br/>This project made me how toon-like can screen-space textures look on characters. 
+            <br/>Also please notice the swirly physics-based animations when the mariners change directions -
+            <br/>It was my contribution and I love how cute their inert arms look :D
+            </p>
+            <img src="images/mariners.gif" alt="Mariners" class="peek-image">
+            <div class="tag-soup">
+                <span class="tag large">Unity</span>
+                <span class="tag large">C#</span>
+            </div>
+        </header>
+    </section>
+
+    <hr class="section-divider">
+
+    <footer>
+        <p>© 2025 Adam Leczkowski</p>
+    </footer>
+
+    <div class="contact-row">
+        <a href="https://github.com/nne-nne" target="_blank" class="contact-btn">
+            <img src="https://cdn-icons-png.flaticon.com/512/25/25231.png" alt="GitHub" class="contact-icon">
+        </a>
+        <a href="mailto:adam.leczkowski@gmail.com" class="contact-btn">
+            <img src="https://cdn-icons-png.flaticon.com/512/8056/8056414.png" alt="Mail" class="contact-icon">
+        </a>
+        <a href="https://www.linkedin.com/in/adam-leczkowski-b02996212/" target="_blank" class="contact-btn">
+            <img src="https://p7.hiclipart.com/preview/902/874/330/computer-icons-linkedin-black-icon.jpg" alt="LinkedIn" class="contact-icon">
+        </a>
+    </div>
 </body>
 </html>

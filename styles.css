@@ -1,147 +1,276 @@
-.top-bar {
-    position: fixed;
-    font-family: 'Quicksand';
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 50px;
-    background-color: #0f0f0f;
-    color: white;
+body {
+    font-family: 'Libre Baskerville', serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+section {
+    height: 100vh;
     display: flex;
+    justify-content: center; 
     align-items: center;
-    justify-content: center;
-    z-index: 1000;
-    box-shadow: 0 1px 3px rgb(255, 255, 255);
-}
-
-#fullpage {
-    font-family: 'Quicksand';
-    margin-top: 50px; 
-    color: white;
-}
-
-.section {
-    display: flex;
-    flex-direction: column; /* Arrange children vertically */
-    justify-content: flex-end; /* Align content at the bottom */
-    height: 100vh; /* Full viewport height */
-    font-size: 24px;
-    color: rgb(255, 255, 255);
-    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8); 
-    background-size: cover; 
-    background-position: center; 
-    background-repeat: no-repeat;
-    position: relative; /* Needed for absolute positioning of the content container */
-}
-
-.section-1 {
-    /*background-image: url('images/RootsOfYggdrasil.png');*/
-    background: 
-        linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), /* Overlay color */
-        url('images/RootsOfYggdrasil.png') no-repeat center center/cover;
-}
-
-.section-2 {
-    /*background-image: url('images/Meowtch.gif');*/
-    background: 
-        linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), /* Overlay color */
-        url('images/Meowtch.gif') no-repeat center center/cover;
-}
-
-.section-3 {
-    background-image: url('images/AloneNotAlone.gif');
-}
-
-.section-4 {
-    background-image: url('images/grass.webp');
-}
-
-.fp-nav ul li a span {
-    background: #0073e6;
-}
-
-.fp-nav ul li a.active span {
-    background: #ffcc00;
-}
-
-/* Full-page section for contact */
-.section-contact {
-    display: flex;
-    justify-content: center; /* Horizontally center content */
-    align-items: center; /* Vertically center content */
-    background: url('path-to-background-image.jpg') no-repeat center center/cover; /* Optional background image */
-    color: white; /* Text color */
-    position: relative;
-    height: 100vh; /* Make the section fill the viewport height */
-}
-
-/* Contact container (semi-transparent box) */
-.contact-container {
-    background-color: rgba(0, 0, 0, 0.6); /* Semi-transparent background */
-    padding: 20px;
-    border-radius: 15px;
     text-align: center;
-    max-width: 500px;
-    width: 90%; /* Responsive width */
-    margin: 0 auto;
-}
-
-
-.profile-photo {
-    width: 300px;
-    height: 300px;
-    border-radius: 50%;
-    margin-bottom: 15px;
-    border: 3px solid white;
-}
-
-.contact-details p {
-    margin: 10px 0;
-    font-size: 16px;
-    line-height: 1.5;
-}
-
-.contact-details a {
-    color: #ffcc00;
-    text-decoration: none;
-    transition: color 0.3s ease;
-}
-
-.contact-details a:hover {
-    color: #ffffff;
-}
-
-/* Container for the heading and description */
-.content-container {
-    background-color: rgba(0, 0, 0, 0.8); /* Semi-transparent background */
-    padding: 30px;
-    padding-bottom: 80px;
-    width: 100%;
-    height: auto; /* Content will take up only as much space as it needs */
-    position: absolute;
-    bottom: 0; /* Stick the container to the bottom */
-    left: 0;
-    right: 0;
-    text-align: center;
+    padding: 10px;
     box-sizing: border-box;
 }
 
-h1, h2, h3 {
-    font-family: 'Signika Negative', sans-serif;
+header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 100vh;
+    width: 60vw;
+    background-color: #161616f1;
+    color: white;
+    box-sizing: border-box;
+    padding-left: 10px;
+    padding-right: 10px;
 }
 
-/* Heading style */
-.content-container h2 {
-    font-size: 2rem;
-    margin-bottom: 15px;
+section {
+    padding-top: 10px;
 }
-.content-container h3 {
-    font-size: 1.5rem;
+
+html {
+    scroll-behavior: smooth;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    gap: 20px;
+}
+
+nav ul li {
+    display: inline-block;
+}
+
+nav a {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+}
+
+p {
+    font-size: 12px;
+}
+
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #131212;
+    color: white;
+}
+
+@media (max-width: 600px) {
+    nav ul {
+        display: block;
+        text-align: center;
+    }
+    nav ul li {
+        display: block;
+        margin: 10px 0;
+    }
+    header{
+        width: 100vw;
+    }
+}
+
+#about {
+    background: url('images/RootsOfYggdrasil.png') center/cover no-repeat;
+}
+
+#grass {
+    background: url('images/grass.webp') center/cover no-repeat;
+}
+
+#mariners {
+    background: url('images/mariners.png') center/cover no-repeat;
+}
+
+#roots {
+    background: url('images/RootsOfYggdrasil.png') center/cover no-repeat;
+}
+
+#deep-astray {
+    background: url('images/DeepAstray.png') center/cover no-repeat;
+}
+
+#meowtch {
+    background: url('images/meowtch.png') center/cover no-repeat;
+}
+
+#eye {
+    background: url('images/eyesjpg.jpg') center/cover no-repeat;
+}
+
+#alone {
+    background: url('images/Alone.png') center/cover no-repeat;
+}
+
+.profile-pic {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid white;
     margin-bottom: 10px;
 }
 
-/* Description style */
-.content-container p {
-    font-size: 1.2rem;
-    line-height: 1;
+.tag-soup {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 3px;
+    justify-content: center;
+    padding: 5px;
+    background-color: #131212;
+}
+
+.tag {
+    background-color: #131212;
+    border: 2px solid #131212;
+    color: #acacac;
+    padding: 5px 10px;
+    font-size: 12px;
+    font-weight: 600;
+    justify-content: center;
+    cursor: default;
+    transition: all 0.3s ease;
+}
+
+.tag:hover {
+    background-color: #131212;
+    border: 2px solid white;
+    color: white;
+    transform: scale(1.3);
+}
+
+.tag.small {
+    font-size: 8px;
+}
+
+.tag.medium {
+    font-size: 10px;
+}
+
+.tag.large {
+    font-size: 12px;
+}
+
+.tag.xlarge {
+    font-size: 20px;
+}
+
+.tag:focus {
+    outline: none;
+    background-color: #333;
+    color: white;
+}
+
+.name{
+    font-size: 20px;
+}
+
+.contact-btn {
+    text-decoration: none;
+    color: white;
+    border: 2px solid rgba(255, 255, 255, 0);
+    background-color: #131212;
+    padding: 10px;
+    margin: 5px;
+    font-size: 24px;
+    transition: background-color 0.3s ease;
+}
+
+.contact-btn:hover {
+    border: 2px solid rgb(255, 255, 255);
+    color: white;
+    transform: scale(1.3);
+    transition: all 0.3s ease;
+}
+
+.contact-row {
+    position: fixed;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #131212;
+    display: flex;
+    justify-content: center;
+    padding: 10px 0;
+    z-index: 1000;
+    width: 100%;
+}
+
+.contact-row .contact-btn {
+    margin: 0 5px;
+}
+
+.contact-btn img.contact-icon {
+    width: 24px;
+    height: 24px;
+    filter: invert(1);
+}
+
+.description {
+    background-color: #131212;
+}
+
+.section-divider {
+    border: none;
+    height: 4px;
+    background-color: #131212;
+    margin: 0px;
+}
+
+.peek-image {
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid #131212;
+    margin-bottom: 10px;
+}
+
+.peek-image:hover {
+    transform: scale(2);
+    transition: all 0.3s ease;
+    border-radius: 0%;
+}
+
+.row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+}
+
+.box {
+    padding: 20px;
+    text-align: center;
+    flex: 1;
+}
+
+.game-link{
+    text-decoration: none;
+    color: white;
+    padding: 5px 10px;
+    font-size: 16px;
+    font-weight: 600;
+    justify-content: center;
+    transition: all 0.3s ease;
+}
+
+.game-link:hover {
+    border: 2px solid rgb(255, 255, 255);
+    background-color: #131212;
+    color: white;
+    font-size: 20px;
+    transform: scale(2);
+    transition: all 0.3s ease;
+    
 }
