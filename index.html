@@ -4,12 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Adam Leczkowski portfolio</title>
+    <link rel="preload" as="image" href="images/RootsOfYggdrasil.webp" type="image/webp">
     <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&display=swap" rel="stylesheet">    
 </head>
 <body>
     <section id="about">
-        <header> <img src="images/ProfilePhoto.png" alt="Adam Leczkowski" class="profile-pic">
+        <header> <img src="images/ProfilePhoto.webp" alt="Adam Leczkowski" class="profile-pic" width="150" height="150" fetchpriority="high">
             <p>Hi! My name is <br/><br/><span class="name">Adam Leczkowski</span></p>
             <p><b>I'm a game developer and a graphics programmer</b></p>
             <p>My stack:</p>
@@ -52,7 +55,7 @@
             <br/>
             I like the idea of a tree with a heart and particle-based leaves.
             </p>
-            <img src="images/roots.gif" alt="Roots" class="peek-image">
+            <video class="peek-image lazy-video" muted loop playsinline preload="none" width="250" height="250" poster="images/roots-poster.webp" aria-label="Roots"><source data-src="images/roots.mp4" type="video/mp4"></video>
             <div class="tag-soup">
                 <span class="tag large">Krita</span>
                 <span class="tag large">Unity</span>
@@ -71,7 +74,7 @@
             <p>I've implemented game mechanics and blowing animations.
             <br/>I appreciate coding extra rules in the last 15 minutes of the gamejam.
             </p>
-            <img src="images/eyes.gif" alt="Eye fortress" class="peek-image">
+            <video class="peek-image lazy-video" muted loop playsinline preload="none" width="250" height="250" poster="images/eyes-poster.webp" aria-label="Eye fortress"><source data-src="images/eyes.mp4" type="video/mp4"></video>
             <div class="tag-soup">
                 <span class="tag large">Unity</span>
                 <span class="tag large">C#</span>
@@ -90,7 +93,7 @@
             <br/>In this game I focused on building the atmosphere of lonely search and it's contrast to a company of someone loved
             <br/>Various visual effects are connected with the progress of gameplay.
             </p>
-            <img src="images/AloneNotAlone.gif" alt="Alone" class="peek-image">
+            <video class="peek-image lazy-video" muted loop playsinline preload="none" width="250" height="250" poster="images/AloneNotAlone-poster.webp" aria-label="Alone"><source data-src="images/AloneNotAlone.mp4" type="video/mp4"></video>
             <div class="tag-soup">
                 <span class="tag large">Unity</span>
                 <span class="tag large">C#</span>
@@ -111,7 +114,7 @@
             <br/>I was responsible the controller, for the depiction of water and the lights
             <br/>As you dive deep astray, the lights get dimmer and dimmer...
             </p>
-            <img src="images/deep.gif" alt="Deep Astray" class="peek-image">
+            <video class="peek-image lazy-video" muted loop playsinline preload="none" width="250" height="250" poster="images/deep-poster.webp" aria-label="Deep Astray"><source data-src="images/deep.mp4" type="video/mp4"></video>
             <div class="tag-soup">
                 <span class="tag large">Unity</span>
                 <span class="tag large">C#</span>
@@ -130,7 +133,7 @@
             <p>During this gamejam, we created a ragdoll cat posessed by some unnatural forces.
             <br/>We obeyed him.
             </p>
-            <img src="images/Meowtch.gif" alt="Meowtch" class="peek-image">
+            <video class="peek-image lazy-video" muted loop playsinline preload="none" width="250" height="250" poster="images/Meowtch-poster.webp" aria-label="Meowtch"><source data-src="images/Meowtch.mp4" type="video/mp4"></video>
             <div class="tag-soup">
                 <span class="tag large">Unity</span>
                 <span class="tag large">C#</span>
@@ -151,7 +154,7 @@
             <br/>Also please notice the swirly physics-based animations when the mariners change directions -
             <br/>It was my contribution and I love how cute their inert arms look :D
             </p>
-            <img src="images/mariners.gif" alt="Mariners" class="peek-image">
+            <video class="peek-image lazy-video" muted loop playsinline preload="none" width="250" height="250" poster="images/mariners-poster.webp" aria-label="Mariners"><source data-src="images/mariners.mp4" type="video/mp4"></video>
             <div class="tag-soup">
                 <span class="tag large">Unity</span>
                 <span class="tag large">C#</span>
@@ -167,14 +170,43 @@
 
     <div class="contact-row">
         <a href="https://github.com/nne-nne" target="_blank" class="contact-btn">
-            <img src="https://cdn-icons-png.flaticon.com/512/25/25231.png" alt="GitHub" class="contact-icon">
+            <img src="https://cdn-icons-png.flaticon.com/512/25/25231.png" alt="GitHub" class="contact-icon" width="24" height="24">
         </a>
         <a href="mailto:adam.leczkowski@gmail.com" class="contact-btn">
-            <img src="https://cdn-icons-png.flaticon.com/512/8056/8056414.png" alt="Mail" class="contact-icon">
+            <img src="https://cdn-icons-png.flaticon.com/512/8056/8056414.png" alt="Mail" class="contact-icon" width="24" height="24">
         </a>
         <a href="https://www.linkedin.com/in/adam-leczkowski-b02996212/" target="_blank" class="contact-btn">
-            <img src="https://p7.hiclipart.com/preview/902/874/330/computer-icons-linkedin-black-icon.jpg" alt="LinkedIn" class="contact-icon">
+            <img src="https://p7.hiclipart.com/preview/902/874/330/computer-icons-linkedin-black-icon.jpg" alt="LinkedIn" class="contact-icon" width="24" height="24">
         </a>
     </div>
+    <script>
+        // Load and play the project clips only while they are on screen.
+        (function () {
+            var videos = document.querySelectorAll('video.lazy-video');
+            function load(v) {
+                if (v.dataset.loaded) return;
+                v.querySelectorAll('source[data-src]').forEach(function (s) { s.src = s.dataset.src; });
+                v.load();
+                v.dataset.loaded = '1';
+            }
+            if (!('IntersectionObserver' in window)) {
+                videos.forEach(function (v) { load(v); v.play(); });
+                return;
+            }
+            var io = new IntersectionObserver(function (entries) {
+                entries.forEach(function (e) {
+                    var v = e.target;
+                    if (e.isIntersecting) {
+                        load(v);
+                        var p = v.play();
+                        if (p && p.catch) p.catch(function () {});
+                    } else if (v.dataset.loaded) {
+                        v.pause();
+                    }
+                });
+            }, { rootMargin: '200px 0px' });
+            videos.forEach(function (v) { io.observe(v); });
+        })();
+    </script>
 </body>
 </html>

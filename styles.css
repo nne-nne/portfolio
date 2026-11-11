@@ -81,7 +81,7 @@ footer {
 }
 
 #about {
-    background: url('images/RootsOfYggdrasil.png') center/cover no-repeat;
+    background: url('images/RootsOfYggdrasil.webp') center/cover no-repeat;
 }
 
 #grass {
@@ -89,27 +89,27 @@ footer {
 }
 
 #mariners {
-    background: url('images/mariners.png') center/cover no-repeat;
+    background: url('images/mariners.webp') center/cover no-repeat;
 }
 
 #roots {
-    background: url('images/RootsOfYggdrasil.png') center/cover no-repeat;
+    background: url('images/RootsOfYggdrasil.webp') center/cover no-repeat;
 }
 
 #deep-astray {
-    background: url('images/DeepAstray.png') center/cover no-repeat;
+    background: url('images/DeepAstray.webp') center/cover no-repeat;
 }
 
 #meowtch {
-    background: url('images/meowtch.png') center/cover no-repeat;
+    background: url('images/meowtch.webp') center/cover no-repeat;
 }
 
 #eye {
-    background: url('images/eyesjpg.jpg') center/cover no-repeat;
+    background: url('images/eyes.webp') center/cover no-repeat;
 }
 
 #alone {
-    background: url('images/Alone.png') center/cover no-repeat;
+    background: url('images/Alone.webp') center/cover no-repeat;
 }
 
 .profile-pic {
@@ -234,6 +234,8 @@ footer {
     object-fit: cover;
     border: 2px solid #131212;
     margin-bottom: 10px;
+    display: block;
+    background-color: #131212;
 }
 
 .peek-image:hover {
